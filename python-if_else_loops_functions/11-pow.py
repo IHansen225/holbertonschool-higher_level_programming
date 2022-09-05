@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def pow(a, b):
     res = a
-    for i in range(0, abs(b-1)):
+    for i in range(1, b):
         res *= a
     return res
