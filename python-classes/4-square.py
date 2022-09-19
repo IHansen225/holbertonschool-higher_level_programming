@@ -2,6 +2,7 @@
 """ class """
 
 class Square:
+    """class attributes"""
     __size = None
 
     """ init function """
@@ -14,17 +15,14 @@ class Square:
             self.__size = size
 
     """area function"""
-
     def area(self):
         return (self.__size ** 2)
 
     """size function"""
-
     def size(self):
         return self.__size
 
     """size assigner"""
-
     def size(self, value):
         if type(value) != int:
             raise TypeError("size must be an integer")
