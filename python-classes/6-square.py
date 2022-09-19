@@ -3,6 +3,8 @@
 """ class """
 
 class Square:
+
+    """class attributes"""
     __size = None
     __position = None
 
@@ -21,11 +23,17 @@ class Square:
         else:
             self.__position = position
 
+    """area function"""
+
     def area(self):
         return (self.__size ** 2)
 
+    """size function"""
+
     def size(self):
         return self.__size
+
+    """size assigner"""
 
     def size(self, value):
         if type(value) != int:
@@ -33,6 +41,8 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    """print function"""
 
     def my_print(self):
         mat = [["#" for i in range(self.__size)] for j in range(self.__size)]
