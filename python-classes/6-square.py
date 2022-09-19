@@ -2,6 +2,9 @@
 
 """ class """
 
+from selectors import EpollSelector
+
+
 class Square:
 
     """class attributes"""
@@ -45,6 +48,9 @@ class Square:
     """print function"""
 
     def my_print(self):
-        mat = [["#" for i in range(self.__size)] for j in range(self.__size)]
-        for i in range(self.__size):
-            print("".join(mat[i]))
+        if self.__size == 0:
+            print("")
+        else:
+            mat = [["#" for i in range(self.__size)] for j in range(self.__size)]
+            for i in range(self.__size):
+                print("".join(mat[i]))
