@@ -2,7 +2,11 @@
 
 """ class """
 class Square:
-    """ init function """
+    """class attributes"""
+    
+    __size = None
+    __position = None
+
     def __init__(self, size=0, position=(0, 0)):
         """ attributes initialization """
         if not (isinstance(size, int)):

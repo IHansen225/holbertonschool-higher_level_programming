@@ -3,6 +3,7 @@
 
 class Square:
     """ class attributes """
+	
     __size = None
     """ init function """
     def __init__(self, size) -> None:
