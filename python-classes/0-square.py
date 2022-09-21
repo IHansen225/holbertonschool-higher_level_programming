@@ -5,3 +5,4 @@ class Square:
     """ do nothing """
 
     pass
+
