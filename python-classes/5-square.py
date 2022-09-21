@@ -14,15 +14,15 @@ class Square:
         else:
             self.__size = size
 
-    """area function"""
+    @property
     def area(self):
         return (self.__size ** 2)
 
-    """size function"""
+    @property.read
     def size(self):
         return self.__size
 
-    """size assigner"""
+    @size.setter
     def size(self, value):
         if type(value) != int:
             raise TypeError("size must be an integer")
@@ -30,8 +30,10 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    """print function"""
     def my_print(self):
-        mat = [["#" for i in range(self.__size)] for j in range(self.__size)]
-        for i in range(self.__size):
-            print("".join(mat[i]))
+        if self.__size == 0:
+            print("")
+        else:
+            mat = [["#" for i in range(self.__size)] for j in range(self.__size)]
+            for i in range(self.__size):
+                print("".join(mat[i]))

@@ -1,18 +1,10 @@
 #!/usr/bin/python3
 
 """ class """
-
-from selectors import EpollSelector
-
-
 class Square:
-
-    """class attributes"""
-    __size = None
-    __position = None
-
     """ init function """
     def __init__(self, size=0, position=(0, 0)):
+        """ attributes initialization """
         if not (isinstance(size, int)):
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -26,26 +18,21 @@ class Square:
         else:
             self.__position = position
 
-    """area function"""
-
+    @property
     def area(self):
         return (self.__size ** 2)
 
-    """size function"""
-
+    @property.read
     def size(self):
         return self.__size
 
-    """size assigner"""
-
+    @size.setter
     def size(self, value):
         if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    """print function"""
 
     def my_print(self):
         if self.__size == 0:

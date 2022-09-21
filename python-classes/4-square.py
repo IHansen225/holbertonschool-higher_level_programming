@@ -14,15 +14,15 @@ class Square:
         else:
             self.__size = size
 
-    """area function"""
+    @property
     def area(self):
         return (self.__size ** 2)
 
-    """size function"""
+    @property.read
     def size(self):
         return self.__size
 
-    """size assigner"""
+    @size.setter
     def size(self, value):
         if type(value) != int:
             raise TypeError("size must be an integer")

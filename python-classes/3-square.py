@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ class """
+
 class Square:
     """class attributes"""
     __size = None
 
     """ init function """
-    def __init__(self, size = 0) -> None:
+    def __init__(self, size = 0):
         if not (isinstance(size, int)):
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -13,6 +14,6 @@ class Square:
         else:
             self.__size = size
 
-    """area function"""
+    @property
     def area(self):
-        return (self.__size * self.__size)
+        return (self.__size ** 2)
