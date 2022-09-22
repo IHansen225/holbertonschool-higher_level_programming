@@ -4,7 +4,7 @@
 
 class Square:
     """class attributes"""
-    
+
     __size = None
 
     """ init function """
@@ -19,7 +19,7 @@ class Square:
     def area(self):
         return (self.__size ** 2)
 
-    @property.read
+    @property
     def size(self):
         return self.__size
 
