@@ -39,5 +39,5 @@ class Square:
             for i in range(10):
                 mat[i] = ["#" for i in range(10)]
             for i in range(10):
-                print(" ".join(mat[i]))
+                print("".join(mat[i]))
 
