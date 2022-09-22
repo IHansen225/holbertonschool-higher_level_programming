@@ -23,7 +23,6 @@ class Square:
         else:
             self.__position = position
 
-    @property
     def area(self):
         return (self.__size ** 2)
 
