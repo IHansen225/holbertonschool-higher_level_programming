@@ -49,5 +49,3 @@ class Square:
             mat = [ps + ["#" for i in range(self.__size)] + fs for j in range(self.__size)]
             for i in range(self.__size):
                 print("".join(mat[i]))
-            print("")
-
