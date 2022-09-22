@@ -4,31 +4,25 @@
 
 class Square:
     """class attributes"""
-    
+
     __size = None
     __position = None
 
+    """ init function """
     def __init__(self, size=0, position=(0, 0)):
-        """ attributes initialization """
-        if not (isinstance(size, int)):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
-        if position is not tuple or len(position) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif not (isinstance(position[0], int) and (isinstance(position[0], int))):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         return (self.__size ** 2)
 
-    @property.read
+    @property
     def size(self):
         return self.__size
+
+    @property
+    def position(self):
+        return self.__position
 
     @size.setter
     def size(self, value):
@@ -37,11 +31,23 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+    
+    @position.setter
+    def position(self, value):
+        if len(value) != 2 or value is not tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value[0]) != int or type(value[1]) != int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def my_print(self):
         if self.__size == 0:
             print("")
         else:
-            mat = [["#" for i in range(self.__size)] for j in range(self.__size)]
+            mat = [[] for j in range(self.__size)]
+            for i in range(self.__size):
+                mat[i] = ["#" for i in range(self.__size)]
             for i in range(self.__size):
                 print("".join(mat[i]))
