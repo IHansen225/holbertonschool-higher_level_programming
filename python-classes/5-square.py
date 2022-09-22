@@ -35,9 +35,9 @@ class Square:
         if self.__size == 0:
             print("")
         else:
-            mat = [[] for j in range(10)]
-            for i in range(10):
-                mat[i] = ["#" for i in range(10)]
-            for i in range(10):
+            mat = [[] for j in range(self.__size)]
+            for i in range(self.__size):
+                mat[i] = ["#" for i in range(self.__size)]
+            for i in range(self.__size):
                 print("".join(mat[i]))
 
