@@ -18,15 +18,9 @@ Using the ``add`` module
 >>> print(add_integer(100.3, -2))
 98
 
->>> try:
->>>    print(add_integer(4, "School"))
->>> except Exception as e:
->>>    print(e)
+>>> print(add_integer(4, "School"))
 b must be an integer
 
->>> try:
->>>    print(add_integer(None))
->>> except Exception as e:
->>>    print(e)
+>>> print(add_integer(None))
 a must be an integer
 
