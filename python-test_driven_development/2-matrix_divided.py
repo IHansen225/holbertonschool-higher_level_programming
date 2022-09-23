@@ -3,9 +3,9 @@
 
 
 def matrix_divided(m, div):
-    """ divides alle elements from a matrix """
+    """ divides all elements from a matrix """
     rl = len(m[0])
-    nmat = m.copy()
+    nmat = [[0 for i in range(rl)] for j in range(rl)]
     if div == 0:
         raise ZeroDivisionError("division by zero")
     elif type(div) is not float and type(div) is not int:
@@ -13,10 +13,8 @@ def matrix_divided(m, div):
     for i in range(len(m)):
         if len(m[i]) != rl:
             raise TypeError("Each row of the matrix must have the same size")
-            return
         for j in range(len(m[i])):
             if type(m[i][j]) is not int and type(m[i][j]) is not float:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-                return
-            nmat[i][j] = m[i][j] / div
+            nmat[i][j] = '%.3f'%(m[i][j] / div)
     return nmat
