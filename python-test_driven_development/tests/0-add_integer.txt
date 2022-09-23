@@ -32,4 +32,4 @@ ValueError: cannot convert float NaN to integer
 
 >>> add_integer(float("inf"))
 Traceback (most recent call last):
-TypeError: cannot convert float infinity to integer
+OverflowError: cannot convert float infinity to integer
