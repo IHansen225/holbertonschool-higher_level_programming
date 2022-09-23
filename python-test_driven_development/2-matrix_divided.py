@@ -6,7 +6,7 @@ def matrix_divided(m, div):
     """ divides all elements from a matrix """
     rl = len(m[0])
     err = "matrix must be a matrix (list of lists) of integers/floats"
-    nmat = [[0 for i in range(rl)] for j in range(rl)]
+    nmat = [[0 for i in range(len(m))] for j in range(len(m))]
     if div == 0:
         raise ZeroDivisionError("division by zero")
     elif type(div) is not float and type(div) is not int:
