@@ -17,5 +17,5 @@ def matrix_divided(m, div):
         for j in range(len(m[i])):
             if type(m[i][j]) is not int and type(m[i][j]) is not float:
                 raise TypeError(err)
-            nmat[i][j] = float('%.2f'%(m[i][j]/div))
+            nmat[i][j] = float('%.2f'%(m[i][j] / div))
     return nmat
