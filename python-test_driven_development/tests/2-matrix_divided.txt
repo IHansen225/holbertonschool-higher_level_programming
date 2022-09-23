@@ -13,7 +13,7 @@ Using the ``matrix_divided`` module
 
 >>> matrix_divided(matrix, "a")
 Traceback (most recent call last):
-TypeError: div must be an number
+TypeError: div must be a number
 
 >>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
