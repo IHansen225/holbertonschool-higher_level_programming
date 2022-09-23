@@ -28,8 +28,8 @@ TypeError: a must be an integer
 
 >>> add_integer(float("NaN"))
 Traceback (most recent call last):
-TypeError: a must be an integer
+TypeError: cannot convert float NaN to integer
 
->>> add_integer(float(inf))
+>>> add_integer(float("inf"))
 Traceback (most recent call last):
-TypeError: a must be an integer
+TypeError: cannot convert float infinity to integer
