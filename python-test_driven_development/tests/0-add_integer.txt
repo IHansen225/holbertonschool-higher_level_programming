@@ -19,8 +19,9 @@ Using the ``add`` module
 98
 
 >>> print(add_integer(4, "School"))
-b must be an integer
+TypeError: b must be an integer
 
 >>> print(add_integer(None))
-a must be an integer
+TypeError: a must be an integer
+
 
