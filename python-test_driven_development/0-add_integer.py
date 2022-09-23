@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ addition function """
 
+
 def add_integer(a, b=98):
     """ checks if a and b are the right format"""
     if type(a) is not int and type(a) is not float:
