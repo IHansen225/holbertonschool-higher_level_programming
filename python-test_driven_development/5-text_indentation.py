@@ -11,4 +11,4 @@ def text_indentation(text):
         elif text[i] == " " and text[i - 1] == " ":
             pass
         else:
-            print(i, end="")
+            print(text[i], end="")
