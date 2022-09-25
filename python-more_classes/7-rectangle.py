@@ -7,7 +7,7 @@ class Rectangle:
     __width = None
     __height = None
     number_of_instances = 0
-    print_symbol = None
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ init function // constructor """
