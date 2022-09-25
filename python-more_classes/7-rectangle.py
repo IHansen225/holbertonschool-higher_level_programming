@@ -67,7 +67,7 @@ class Rectangle:
             return ""
         r = [[ps for i in range(self.__width)] for j in range(self.__height)]
         for i in range(len(r)):
-            s += "".join(r[i]) + ("\n" if i + 1 != len(r) else "")
+            s += "".join(str(r[i])) + ("\n" if i + 1 != len(r) else "")
         return s
 
     def __repr__(self) -> repr:
@@ -78,7 +78,7 @@ class Rectangle:
         ps = self.print_symbol
         r = [[ps for i in range(self.__width)] for j in range(self.__height)]
         for i in range(len(r)):
-            print("".join(r[i]))
+            print("".join(str(r[i])))
         return s
 
     def __del__(self):
