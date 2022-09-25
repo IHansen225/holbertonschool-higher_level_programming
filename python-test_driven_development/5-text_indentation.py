@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ text indentation function """
 
+
 def text_indentation(text):
     """ print two new lines after .?: """
     nstr = ""
