@@ -62,7 +62,7 @@ class Rectangle:
 
     def __str__(self) -> str:
         s = ""
-        ps = self.print_symbol
+        ps = str(self.print_symbol)
         if self.__height == 0 or self.__width == 0:
             return ""
         r = [[ps for i in range(self.__width)] for j in range(self.__height)]
@@ -75,7 +75,7 @@ class Rectangle:
 
     def __print__(self) -> print:
         s = ""
-        ps = self.print_symbol
+        ps = str(self.print_symbol)
         r = [[ps for i in range(self.__width)] for j in range(self.__height)]
         for i in range(len(r)):
             print("".join(r[i]))
