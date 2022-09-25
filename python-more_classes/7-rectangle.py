@@ -24,6 +24,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+        self.print_symbol = Rectangle.print_symbol
 
     @property
     def width(self):
