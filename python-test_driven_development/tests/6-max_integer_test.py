@@ -7,25 +7,25 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     
-    def maxAtEnd(self):
+    def test_maxAtEnd(self):
         self.assertEqual(max_integer([1, 2, 3, 4], 4))
 
-    def maxAtBeg(self):
+    def test_maxAtBeg(self):
         self.assertEqual(max_integer([5, 2, 3, 4], 5))
 
-    def maxAtMid(self):
+    def test_maxAtMid(self):
         self.assertEqual(max_integer([5, 2, 6, 3, 4], 6))
 
-    def negExists(self):
+    def test_negExists(self):
         self.assertEqual(max_integer([5, -4, 6, 3, 4], 6))
 
-    def allNeg(self):
+    def test_allNeg(self):
         self.assertEqual(max_integer([-5, -4, -6, -3, -4], -3))
 
-    def oneElement(self):
+    def test_oneElement(self):
         self.assertEqual(max_integer([5], 5))
 
-    def noElement(self):
+    def test_noElement(self):
         self.assertEqual(max_integer([], None))
 
 if __name__ == '__main__':
