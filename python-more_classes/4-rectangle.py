@@ -66,13 +66,7 @@ class Rectangle:
         return s
 
     def __repr__(self) -> repr:
-        s = ""
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        r = [["#" for i in range(self.__width)] for j in range(self.__height)]
-        for i in range(len(r)):
-            s += "".join(r[i]) + ("\n" if i + 1 != len(r) else "")
-        return s
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __print__(self) -> print:
         s = ""
@@ -81,13 +75,3 @@ class Rectangle:
             print("".join(r[i]))
         return s
 
-    def __eval__(self, string) -> eval:
-        w = 0
-        h = 0
-        for i in string:
-            h = h + 1 if i == chr(-1) else h 
-        j = 0
-        while string[j] != "\n":
-            w += 1
-            j += 1
-        return Rectangle(w, h)
