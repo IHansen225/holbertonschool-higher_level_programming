@@ -7,7 +7,7 @@ class Rectangle:
     __width = None
     __height = None
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = None
 
     def __init__(self, width=0, height=0):
         """ init function // constructor """
@@ -24,6 +24,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+        self.print_symbol = "#"
 
     @property
     def width(self):
@@ -61,7 +62,7 @@ class Rectangle:
 
     def __str__(self) -> str:
         s = ""
-        ps = Rectangle.print_symbol
+        ps = self.print_symbol
         if self.__height == 0 or self.__width == 0:
             return ""
         r = [[ps for i in range(self.__width)] for j in range(self.__height)]
@@ -74,7 +75,7 @@ class Rectangle:
 
     def __print__(self) -> print:
         s = ""
-        ps = Rectangle.print_symbol
+        ps = self.print_symbol
         r = [[ps for i in range(self.__width)] for j in range(self.__height)]
         for i in range(len(r)):
             print("".join(r[i]))
