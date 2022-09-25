@@ -85,7 +85,7 @@ class Rectangle:
         w = 0
         h = 0
         for i in string:
-            h = h + 1 if i == "\n" else h
+            h = h + 1 if i == chr(-1) else h 
         j = 0
         while string[j] != "\n":
             w += 1
