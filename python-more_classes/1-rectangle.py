@@ -6,7 +6,7 @@ class Rectangle:
     """ class attributes """
     __width = None
     __height = None
-    
+
     def __init__(self, width=0, height=0):
         """ init function // constructor """
         if width < 0:
@@ -25,11 +25,11 @@ class Rectangle:
     @property
     def width(self):
         return self.__width
-    
+
     @property
     def height(self):
         return self.__height
-    
+
     @width.setter
     def width(self, value):
         if type(value) is not int:
@@ -38,7 +38,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     @height.setter
     def height(self, value):
         if type(value) is not int:
