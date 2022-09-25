@@ -74,4 +74,3 @@ class Rectangle:
         for i in range(len(r)):
             print("".join(r[i]))
         return s
-
