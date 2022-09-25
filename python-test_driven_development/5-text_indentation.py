@@ -19,5 +19,3 @@ def text_indentation(text):
 		else:
 			print(nstr[i], end="")
 	print("")
-
-text_indentation("Holberton. School? How are you:    John")
