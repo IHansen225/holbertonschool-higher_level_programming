@@ -9,3 +9,6 @@ Using the ``MyList`` class
 >>> my_list = MyList()
 >>> print(isinstance(my_list, MyList))
 True
+
+>>> print(dir(MyList) == dir(list))
+True
