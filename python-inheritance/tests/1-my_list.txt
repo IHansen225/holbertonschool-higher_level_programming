@@ -4,3 +4,8 @@ The ``MyList`` module
 Using the ``MyList`` class
 ------------------------
 
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> print(isinstance(my_list, MyList))
+True
