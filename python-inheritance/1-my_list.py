@@ -9,4 +9,3 @@ class MyList(list):
         sl = self.copy()
         sl.sort()
         print(sl)
-        return sl
