@@ -10,6 +10,7 @@ Using the ``MyList`` class
 
 >>> my_list.print_sorted()
 []
+[]
 
 >>> print(isinstance(my_list, MyList))
 True
@@ -26,7 +27,8 @@ True
 
 >>> my_list.print_sorted()
 [-7, 1, 2, 3, 4, 5]
-
->>> print(my_list.print_sorted())
 [-7, 1, 2, 3, 4, 5]
-None
+
+>>> my_list.print_sorted()
+[-7, 1, 2, 3, 4, 5]
+[-7, 1, 2, 3, 4, 5]
