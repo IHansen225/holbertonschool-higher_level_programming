@@ -6,6 +6,7 @@ class MyList(list):
     """ subclass """
     def print_sorted(self):
         """ print sorted list """
-        self.sort()
-        print(self)
+        sl = self.copy()
+        sl.sort()
+        print(sl)
 
