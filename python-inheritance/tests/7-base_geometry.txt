@@ -11,7 +11,7 @@ Using the ``BaseGeometry`` class
 >>> print(isinstance(bg, BaseGeometry))
 True
 
->> bg.area()
+>> bg.area
 area() is not implemented
 
 >>> bg.integer_validator("my_int", 12)
