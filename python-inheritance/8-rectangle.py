@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ rectangle class """
 
+
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 integer_validator = __import__('7-base_geometry').integer_validator
 
