@@ -2,7 +2,6 @@
 """ add arguments to list in file """
 import sys
 import os.path
-
 sjson = __import__('5-save_to_json_file').save_to_json_file
 ljson = __import__('6-load_from_json_file').load_from_json_file
 
