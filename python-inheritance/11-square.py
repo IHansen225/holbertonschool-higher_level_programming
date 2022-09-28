@@ -10,10 +10,10 @@ class Square(Rectangle):
         """ init function """
         self.integer_validator("size", size)
         super().__init__(size, size)
-        __size = size
+        self.__size = size
 
     def area(self):
         return super().area()
 
     def __str__(self) -> str:
-        return f"[Square] {self.__size} / {self.__size}"
+        return "[Square] {}/{}".format(self.__size, self.__size)
