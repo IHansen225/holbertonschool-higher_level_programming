@@ -15,11 +15,10 @@ def load_from_json_file(filename):
         return json.load(f)
 
 def append_write(argv):
+	""" append arguments to write """
 	lf = load_from_json_file("add_item.json")
 	for i in range(len(argv)):
 		lf.append(argv[i])
 	save_to_json_file(lf, "add_item.json")
 
 append_write(sys.argv)
-
-	
