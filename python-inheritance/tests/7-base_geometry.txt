@@ -60,7 +60,7 @@ Traceback (most recent call last):
 SyntaxError: invalid character in identifier
 
 >>> try:
->>>   bg.area()
+>>> bg.area()
 >>> except Exception as e:
->>>   print(e)
+>>> print(e)
 area() is not implemented
