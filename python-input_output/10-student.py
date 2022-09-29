@@ -11,8 +11,10 @@ class Student():
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs=None):
-        if attrs is None:
+    def to_json(self, at=None):
+        if at is None:
             return self.__dict__.copy()
         else:
-            self.__dict__.copy().get(attrs)
+            dic = self.__dict__.copy()
+            return dict((at, dic[at]) for i in at if i in dic)
+
