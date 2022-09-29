@@ -23,5 +23,5 @@ class Student():
             return dic
 
     def reload_from_json(self, json):
-        for k, v in json:
-            self.k = v
+        self.__dict__.update(json)
+        return self
