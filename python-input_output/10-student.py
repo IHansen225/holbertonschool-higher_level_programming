@@ -15,6 +15,11 @@ class Student():
         if at is None:
             return self.__dict__.copy()
         else:
-            dic = self.__dict__.copy()
-            return dict((at, dic[at]) for i in at if i in dic)
+            dic = {}
+            for i in at:
+                for k, v in self.__dict__.items():
+                    if k == i:
+                        dic[k] = v
+            return dic
+
 
