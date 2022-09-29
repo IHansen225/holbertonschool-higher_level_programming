@@ -9,5 +9,5 @@ fp = "add_item.json"
 ls = load_from_json_file(fp) if os.path.exists(fp) else []
 
 for i in range(1, len(sys.argv)):
-    ls.append(i)
+    ls.append(sys.argv[i])
 save_to_json_file(ls, fp)
