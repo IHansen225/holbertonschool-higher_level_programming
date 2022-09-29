@@ -21,5 +21,3 @@ class Student():
                     if k == i:
                         dic[k] = v
             return dic
-
-
