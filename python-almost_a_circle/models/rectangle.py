@@ -3,9 +3,10 @@
 Project: "Almost a circle"
 File contents: Rectangle class based on the "Base" class
 """
+from models import Base
 
 
-class Rectangle():
+class Rectangle(Base):
     """
     Rectangle class
 
