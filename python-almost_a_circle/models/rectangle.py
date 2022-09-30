@@ -3,7 +3,7 @@
 Project: "Almost a circle"
 File contents: Rectangle class based on the "Base" class
 """
-from models import Base
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
