@@ -7,10 +7,6 @@ import json
 from os.path import exists
 
 
-import json
-from os.path import exists
-
-
 class Base():
     """
     Base class
