@@ -4,6 +4,11 @@ Project: "Almost a circle"
 File contents: Base class constructor and methods
 """
 import json
+from os.path import exists
+
+
+import json
+from os.path import exists
 
 
 class Base():
@@ -38,10 +43,17 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
+        fn = f"{cls.__name__}.json"
         if list_objs is None or list_objs == []:
-            json.dump("[]", f"{cls}.json")
+            jss = json.dumps("[]")
+            with open(fn, "w") as f:
+                f.write(jss)
         else:
-            json.dump(list_objs, f"{cls}.json")
+            for i in range(len(list_objs)):
+                list_objs[i] = list_objs[i].to_dictionary()
+            jss = json.dumps(list_objs)
+            with open(fn, "w") as f:
+                f.write(jss)
 
     def from_json_string(json_string):
         if json_string is None or json_string == "":
@@ -51,8 +63,19 @@ class Base():
     
     @classmethod
     def create(cls, **dictionary):
-        if cls == Rectangle:
+        if cls.__name__ == "Rectangle":
             dum = Rectangle(1, 1)
-        elif cls == Square:
+        elif cls.__name__ == "Square":
             dum = Square(1)
-        dum.update(dictionary)
+        dum.update(**dictionary)
+        return dum
+
+    @classmethod
+    def load_from_file(cls):
+        ilist = []
+        if exists(f"{cls.__name__}.json"):
+            with open(f"{cls.__name__}.json", "r") as f:
+                ob = list(Base.from_json_string(f.read()))
+            for i in ob:
+                ilist.append(cls.create(**i))
+        return ilist

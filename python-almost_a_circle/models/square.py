@@ -53,5 +53,5 @@ class Square(Rectangle):
                     super(Square, type(self)).y.fset(self, v)
 
     def to_dictionary(self):
-        """ returns dictionary representation of the current shape """
         return super().to_dictionary()
+
