@@ -95,7 +95,8 @@ class Rectangle(Base):
     def display(self):
         """ display the shape in a visualization """
         print("\n" * self.__y, end="")
-        print(((" " * self.__x) + ("#" * self.__width) + "\n") * self.__height)
+        for i in range(self.__height):
+            print(((" " * self.__x) + ("#" * self.__width)))
 
     def to_dictionary(self):
         """ returns dictionary representation of the current shape """
