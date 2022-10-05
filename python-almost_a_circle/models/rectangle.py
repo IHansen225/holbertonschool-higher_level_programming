@@ -4,7 +4,6 @@ Project: "Almost a circle"
 File contents: Rectangle class based on the "Base" class
 """
 from .base import Base
-from .square import Square
 
 
 class Rectangle(Base):
@@ -31,7 +30,7 @@ class Rectangle(Base):
         self.__y = y
 
     def __str__(self):
-        ty = "Square" if isinstance(self, Square) else "Rectangle"
+        ty = "Square" if not isinstance(self, Rectangle) else "Rectangle"
         pos = f"{self.__x}/{self.__y}"
         siz = f"{self.__width}"
         siz += f"/{self.__height}" if ty == "Rectangle" else ""
