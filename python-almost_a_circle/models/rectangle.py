@@ -56,12 +56,12 @@ class Rectangle(Base):
     def width(self, value):
         super().integer_validator("width", value)
         self.__width = value
-    
+
     @height.setter
     def height(self, value):
         super().integer_validator("height", value)
         self.__height = value
-    
+
     @x.setter
     def x(self, value):
         super().integer_validator("x", value)
