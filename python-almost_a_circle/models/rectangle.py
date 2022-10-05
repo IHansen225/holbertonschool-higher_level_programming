@@ -4,6 +4,7 @@ Project: "Almost a circle"
 File contents: Rectangle class based on the "Base" class
 """
 from .base import Base
+from .square import Square
 
 
 class Rectangle(Base):
