@@ -109,4 +109,5 @@ class Rectangle(Base):
             dstr = "{" + f"{id}, {x}, {width}, {y}" + "}"
         else:
             dstr = "{" + f"{x}, {y}, {id}, {height}, {width}" + "}"
-        return eval(dstr)
+        dstr = eval(dstr)
+        return dstr
