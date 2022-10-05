@@ -55,4 +55,3 @@ class Square(Rectangle):
     def to_dictionary(self):
         """ returns a dictionary representation of the current shape """
         return super().to_dictionary()
-
