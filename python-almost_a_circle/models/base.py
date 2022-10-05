@@ -52,6 +52,7 @@ class Base():
                 f.write(jss)
 
     def from_json_string(json_string):
+        """ returns object loaded from json string input """
         if json_string is None or json_string == "":
             return []
         else:
