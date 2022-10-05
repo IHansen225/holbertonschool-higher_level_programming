@@ -105,9 +105,5 @@ class Rectangle(Base):
         id = f"'id': {self.id}"
         width = f"'width': {self.__width}"
         height = f"'height': {self.__height}"
-        if isinstance(self, Square):
-            dstr = "{" + f"{id}, {x}, {width}, {y}" + "}"
-        else:
-            dstr = "{" + f"{x}, {y}, {id}, {height}, {width}" + "}"
-        dstr = eval(dstr)
-        return dstr
+        dstr = "{" + f"{x}, {y}, {id}, {height}, {width}" + "}"
+        return eval(dstr)
