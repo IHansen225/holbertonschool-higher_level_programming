@@ -52,6 +52,12 @@ class Square(Rectangle):
                 if k == "y":
                     super(Square, type(self)).y.fset(self, v)
 
+    def __str__(self):
+        ty = "Square"
+        pos = f"{self.__x}/{self.__y}"
+        siz = f"{self.__width}"
+        return (f"[{ty}] ({self.id}) {pos} - {siz}")
+
     def to_dictionary(self):
         """ returns a dictionary representation of the current shape """
         return super().to_dictionary()
