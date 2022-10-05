@@ -54,8 +54,8 @@ class Square(Rectangle):
 
     def __str__(self):
         ty = "Square"
-        pos = f"{self.__x}/{self.__y}"
-        siz = f"{self.__width}"
+        pos = f"{super().x}/{super().y}"
+        siz = f"{super().width}"
         return (f"[{ty}] ({self.id}) {pos} - {siz}")
 
     def to_dictionary(self):
