@@ -3,7 +3,7 @@
 Project: "Almost a circle"
 File contents: Square class based on the "Rectangle" class
 """
-from rectangle import Rectangle
+from .rectangle import Rectangle
 
 
 class Square(Rectangle):
