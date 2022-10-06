@@ -46,9 +46,8 @@ class Base():
             with open(fn, "w") as f:
                 f.write(jss)
         else:
-            for i in range(len(list_objs)):
-                list_objs[i] = list_objs[i].to_dictionary()
-            jss = json.dumps(list_objs)
+            st = Base.to_json_string(list_objs)
+            jss = json.dumps(st)
             with open(fn, "w") as f:
                 f.write(jss)
 
