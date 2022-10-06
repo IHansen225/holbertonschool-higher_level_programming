@@ -73,7 +73,7 @@ class Base():
         ilist = []
         if exists(f"{cls.__name__}.json"):
             with open(f"{cls.__name__}.json", "r") as f:
-                ob = list(Base.from_json_string(f.read()))
-            for i in ob:
-                ilist.append(cls.create(**i))
+                ob = cls.from_json_string(f.read())
+                for i in ob:
+                    ilist.append(cls.create(**i))
         return ilist
