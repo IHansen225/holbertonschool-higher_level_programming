@@ -22,7 +22,7 @@ class Base():
         self.id = self.__nb_objects if id is None else id
 
     def integer_validator(self, name, value):
-        """ valdates value inputs and raises exceptions depending on the error """
+        """ valdates value inputs for object properties """
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         elif name in {"width", "height"} and value <= 0:
@@ -58,7 +58,7 @@ class Base():
             return []
         else:
             return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         if cls.__name__ == "Rectangle":
