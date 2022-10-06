@@ -62,9 +62,9 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         if cls.__name__ == "Rectangle":
-            dum = Rectangle(1, 1)
+            dum = cls(1, 1)
         elif cls.__name__ == "Square":
-            dum = Square(1)
+            dum = cls(1)
         dum.update(**dictionary)
         return dum
 
