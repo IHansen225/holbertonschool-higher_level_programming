@@ -42,14 +42,15 @@ class Base():
     def save_to_file(cls, list_objs):
         fn = f"{cls.__name__}.json"
         if list_objs is None or list_objs == []:
-            jss = json.dumps("[]")
+            jss = json.dumps([])
             with open(fn, "w") as f:
                 f.write(jss)
         else:
+            for i in range(len(list_objs)):
+                list_objs[i] = list_objs[i].to_dictionary()
             st = Base.to_json_string(list_objs)
-            jss = json.dumps(st)
             with open(fn, "w") as f:
-                f.write(jss)
+                f.write(st)
 
     def from_json_string(json_string):
         """ returns object loaded from json string input """
