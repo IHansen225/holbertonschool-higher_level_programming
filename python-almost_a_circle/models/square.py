@@ -60,9 +60,9 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """ returns a dictionary representation of the current shape """
-        x = f"'x': {self.__x}"
-        y = f"'y': {self.__y}"
+        x = f"'x': {super().x}"
+        y = f"'y': {super().y}"
         id = f"'id': {self.id}"
-        width = f"'size': {self.__width}"
+        width = f"'size': {super().width}"
         dstr = "{" + f"{id}, {x}, {width}, {y}" + "}"
         return eval(dstr)
