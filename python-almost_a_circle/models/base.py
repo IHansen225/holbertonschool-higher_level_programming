@@ -70,8 +70,9 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
+        fn = cls.__name__ + ".json"
         ilist = []
-        if exists(f"{cls.__name__}.json"):
+        if exists(fn):
             with open(f"{cls.__name__}.json", "r") as f:
                 ob = cls.from_json_string(f.read())
                 for i in ob:
