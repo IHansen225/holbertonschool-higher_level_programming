@@ -30,6 +30,7 @@ class Base():
         elif name in {"x", "y"} and value < 0:
             raise ValueError(f"{name} must be >= 0")
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """ returns a json string representation of a list of dictionaries """
         if list_dictionaries is None or list_dictionaries == []:
