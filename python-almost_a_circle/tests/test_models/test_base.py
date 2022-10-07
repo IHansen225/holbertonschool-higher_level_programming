@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """ unittest for Base class """
-
-
 import unittest
 from models.base import Base
+
 
 class Test_classBase(unittest.TestCase):
 
     def test_autoID(self):
+        """ check auto-assigned of id parameter """
         b1 = Base()
         self.assertEqual(b1.id, 1)
 
