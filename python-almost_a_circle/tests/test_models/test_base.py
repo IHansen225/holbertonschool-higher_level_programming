@@ -32,10 +32,6 @@ class Test_classBase(unittest.TestCase):
         b5 = Base(-10)
         self.assertEqual(b5.id, -10)
 
-    def test_strID(self):
-        b6 = Base("Betty")
-        self.assertEqual(b6.id, "Betty")
-
     def test_argcount(self):
         with self.assertRaises(TypeError):
             Base(1, 2, 3, 4)
