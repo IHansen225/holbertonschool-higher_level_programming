@@ -62,34 +62,6 @@ class Test_Rectangle(unittest.TestCase):
         r3 = Rectangle(1, 1)
         self.assertEqual(r3.area(), 1)
 
-    def test_display_without_xy(self):
-        """ check the correct print of the rectangle """
-        # without x and y values
-        # creating a temporary output
-        temp = StringIO()
-        # redirect the output to my temporary output
-        sys.stdout = temp
-        
-        rect0 = Rectangle(1, 2)
-        rect0.display()
-        self.assertEqual(temp.getvalue(), "#\n#\n")
-
-        # without y value
-        temp = StringIO()
-        sys.stdout = temp
-
-        rect1 = Rectangle(1, 2, 3)
-        rect1.display()
-        self.assertEqual(temp.getvalue(), "   #\n   #\n")
-
-        # with x and y values
-        temp = StringIO()
-        sys.stdout = temp
-
-        rect2 = Rectangle(2, 2, 2, 1)
-        rect2.display()
-        self.assertEqual(temp.getvalue(), "\n  ##\n  ##\n")
-
     def test_to_dictionary(self):
         """ check the correct return of the to_dictionary method """
         rect = Rectangle(1, 2, 3, 0, 8)
@@ -117,6 +89,3 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(rect1.height, 2)
         self.assertEqual(rect1.x, 3)
         self.assertEqual(rect1.y, 4)
-
-    def test_save_to_file(self):
-        """ check the correct functionality of the save_to_file method """
