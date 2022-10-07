@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ unittest for Base class """
+"""
 import unittest
 from models.rectangle import Rectangle
 
@@ -60,32 +61,5 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_area(self):
         r3 = Rectangle(1, 1)
-        self.assertEqual(r3.area(), 1)
-
-    def test_to_dictionary(self):
-        """ check the correct return of the to_dictionary method """
-        rect = Rectangle(1, 2, 3, 0, 8)
-        result = {'x': 3, 'y': 0, 'id': 8, 'height': 2, 'width': 1}
-        self.assertEqual(rect.to_dictionary(), result)
-
-    def test_update(self):
-        """ check the correct update of attributes """
-        rect = Rectangle(1, 1, 1, 1, 1)
-
-        rect.update(2)
-        self.assertEqual(rect.__str__(), '[Rectangle] (2) 1/1 - 1/1')
-
-        rect.update(height=3, width=4, x=5, y=6)
-        self.assertEqual(rect.__str__(), '[Rectangle] (2) 5/6 - 4/3')
-
-    def test_create_method(self):
-        """ check the correct creation of a new instance """
-        rect0 = Rectangle.create(**{ 'id': 89 })
-        self.assertEqual(rect0.id, 89)
-
-        rect1 = Rectangle.create(**{'width': 1, 'height': 2, 'x': 3, 'y': 4 })
-        self.assertEqual(rect1.id, 5)
-        self.assertEqual(rect1.width, 1)
-        self.assertEqual(rect1.height, 2)
-        self.assertEqual(rect1.x, 3)
-        self.assertEqual(rect1.y, 4)
+        self.assertEqual(r3.area(), 1) 
+"""
