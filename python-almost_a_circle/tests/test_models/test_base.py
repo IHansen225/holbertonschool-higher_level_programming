@@ -9,7 +9,7 @@ class BaseClassTest(unittest.TestCase):
     
     def test_autoID(self):
         b = Base()
-        self.assert_equal(b.id, 1) 
+        self.assert_equal(b.id, 0) 
 
 if __name__ == '__main__':
     unittest.main()
