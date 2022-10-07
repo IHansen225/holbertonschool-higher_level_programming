@@ -4,7 +4,7 @@ import unittest
 from models.base import Base
 
 
-class Test_classBase(unittest.TestCase):
+class Test_Base(unittest.TestCase):
 
     def test_autoID(self):
         b = Base(id=None)
