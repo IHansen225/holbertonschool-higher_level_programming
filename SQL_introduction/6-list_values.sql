@@ -1,2 +1,2 @@
 -- Show all rows on table
-SHOW COLUMNS
+SELECT * FROM first_table
