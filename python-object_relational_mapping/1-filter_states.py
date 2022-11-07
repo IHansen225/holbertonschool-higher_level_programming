@@ -6,11 +6,17 @@
 import sys
 import MySQLdb as sql
 
-conn = sql.connect(host='localhost', port=3306, user=sys.argv[1], password=sys.argv[2], db=sys.argv[3], charset='utf8')
-cursor = conn.cursor()
-cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
-res = cursor.fetchall()
-for row in res:
-    print(row)
-cursor.close()
-conn.close()
+def queryExec():
+    """
+        Creates a connection to the database and executes a query
+    """
+    conn = sql.connect(host='localhost', port=3306, user=sys.argv[1], password=sys.argv[2], db=sys.argv[3], charset='utf8')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    res = cursor.fetchall()
+    for row in res:
+        print(row)
+    cursor.close()
+    conn.close()
+
+queryExec()
