@@ -6,6 +6,9 @@
 import sys
 import MySQLdb as sql
 
+"""
+    Execution function
+"""
 def queryExec():
     """
         Creates a connection to the database and executes a query
