@@ -28,7 +28,7 @@ class QueryExec():
         cur = conn.cursor()
         cur.execute("SELECT states.name, cities.name FROM\
             states JOIN cities ON states.id = cities.state_id\
-            ORDER BY id ASC")
+            ORDER BY states.id ASC")
         result = cur.fetchall()
         cityCount = 1
         for row in result:
