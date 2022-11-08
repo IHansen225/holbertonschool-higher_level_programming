@@ -15,6 +15,5 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    states_query = session.query(State).first()
-    for i in states_query:
-        print(f"{i.id}: {i.name}")
+    states_query = session.query(State).filter().first()
+    print(states_query)
