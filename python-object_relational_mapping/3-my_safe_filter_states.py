@@ -34,5 +34,6 @@ class QueryExec():
         cur.close()
         conn.close()
 
+
 if __name__ == '__main__':
     obj = QueryExec(sys.argv)
