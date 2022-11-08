@@ -15,4 +15,8 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    NewRecord = 
+    NewRecord = State(name="Louisiana")
+    states_query = session.query(State).filter(
+        State.name == "Louisiana"
+    ).one()
+    print(states_query.id)
