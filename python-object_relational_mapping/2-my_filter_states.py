@@ -28,7 +28,7 @@ class QueryExec():
         cur = conn.cursor()
         query = """SELECT *
             FROM states
-            WHERE name = '{}' COLLATE Latin1_General_CS_AS
+            WHERE CONVERT(varbinary, name) = CONVERT(varbinary, '{}')
             ORDER BY id ASC""".format(argv[4])
         cur.execute(query)
         result = cur.fetchall()
