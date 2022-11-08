@@ -15,4 +15,11 @@ engine = create_engine(f"\
 Base.metadata.create_all(engine)
 
 Session = sessionmaker(engine)
+session = Session()
 
+states_query = session.query(State).all()
+for i in states_query:
+    print(f"{i.id}: {i.name}")
+
+if __name__ == "__main__":
+    pass
