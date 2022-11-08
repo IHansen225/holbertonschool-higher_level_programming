@@ -26,9 +26,8 @@ class QueryExec():
             db=argv[3]
         )
         cur = conn.cursor()
-        cur.execute("SELECT * FROM states\
-            WHERE BINARY name = '%(name)s'\
-            ORDER BY id ASC", {'name': argv[4]})
+        cur.execute("SELECT * FROM states WHERE states.name\
+        = %(username)s ORDER BY states.id", {'username': argv[4]})
         result = cur.fetchall()
         for row in result:
             print(row)
