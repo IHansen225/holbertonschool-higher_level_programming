@@ -46,6 +46,8 @@ class QueryExec():
         for i in argv:
             if i.find(';') != -1:
                 i = i.split(';')[0]
+                i.replace("'", "")
+                i.replace('"', "")
         return nargv
 
 
