@@ -28,7 +28,7 @@ class QueryExec():
         cur = conn.cursor()
         cur.execute("SELECT name FROM cities WHERE states.name\
             = %(stname)s JOIN states ON states.id = cities.state_id\
-            ORDER BY id ASC", {'stname': argv[4]})
+            ORDER BY cities.id ASC", {'stname': argv[4]})
         result = cur.fetchall()
         for row in result:
             print(row)
