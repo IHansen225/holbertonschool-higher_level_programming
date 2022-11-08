@@ -28,7 +28,7 @@ class QueryExec():
         cur = conn.cursor()
         query = """SELECT *
             FROM states
-            WHERE name = '{}'
+            WHERE name = '{}' COLLATE Latin1_General_CS_AS
             ORDER BY id ASC""".format(argv[4])
         cur.execute(query)
         result = cur.fetchall()
