@@ -20,7 +20,6 @@ class QueryExec():
         """
             Constructor/Init function
         """
-        argv = self.inputClean(argv)
         conn = sql.connect(
             host='localhost', port=3306,
             user=argv[1], passwd=argv[2],
@@ -36,20 +35,6 @@ class QueryExec():
             print(row)
         cur.close()
         conn.close()
-
-    def inputClean(self, argv):
-        """
-            Cleans input arguments for SQLi
-            protection
-        """
-        nargv = argv.copy()
-        for i in argv:
-            if i.find(';') != -1:
-                i = i.split(';')[0]
-                i.replace("'", "")
-                i.replace('"', "")
-        return nargv
-
 
 if __name__ == '__main__':
     obj = QueryExec(sys.argv)
