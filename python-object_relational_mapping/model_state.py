@@ -15,5 +15,5 @@ class State(Base):
     """
     __tablename__ = 'states'
 
-    id = sa.Column(sa.Integer, primary_key=True, nullable=False)
+    id = sa.Column(sa.Identity(start=1, cycle=True), primary_key=True, nullable=False)
     name = sa.Column(sa.String(128), nullable=True)
