@@ -44,11 +44,10 @@ class QueryExec():
         """
         nargv = argv.copy()
         for i in argv:
-            for j in st.punctuation:
-                i = i.replace(j, "")
+            if i.find(';') != -1:
+                i = i.split(';')[0]
         return nargv
 
 
 if __name__ == '__main__':
     obj = QueryExec(sys.argv)
-
