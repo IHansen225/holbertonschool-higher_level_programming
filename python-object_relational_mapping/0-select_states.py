@@ -20,11 +20,11 @@ class QueryExec():
         """
         argv = self.inputClean(argv)
         conn = sql.connect(
-            host = 'localhost',
-            port = 3306,
-            user = argv[1],
-            passwd = argv[2],
-            db = argv[3]
+            host='localhost',
+            port=3306,
+            user=argv[1],
+            passwd=argv[2],
+            db=argv[3]
         )
         cur = conn.cursor()
         cur.execute(f"SELECT * FROM states ORDER BY id ASC")
@@ -44,6 +44,7 @@ class QueryExec():
             for j in st.punctuation:
                 i = i.replace(j, "")
         return nargv
+
 
 if __name__ == '__main__':
     query = QueryExec(sys.argv)
