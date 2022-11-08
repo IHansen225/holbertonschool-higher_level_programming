@@ -32,10 +32,9 @@ class QueryExec():
         result = cur.fetchall()
         rowCount = len(result)
         resString = ""
-        for i in result:
-            resString += i[0]
-            resString += ", "
-            print(type(rowCount))
+        for i in range(rowCount):
+            resString += result[i][0]
+            resString += ", " if i < rowCount else ""
         print(resString)
         cur.close()
         conn.close()
