@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session()
 
     states_query = session.query(State).filter(
-        "a" in states_query.name
+        states_query.name like "%a%"
     )
     if states_query is None:
         print("Nothing")
