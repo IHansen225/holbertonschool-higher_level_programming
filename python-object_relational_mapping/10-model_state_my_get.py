@@ -18,5 +18,8 @@ if __name__ == "__main__":
     states_query = session.query(State).filter(
         State.name == f"{argv[4]}"
     )
-    for i in states_query:
-        print(f"{i.id}: {i.name}")
+    if states_query is None:
+        print("Not found")
+    else:
+        for i in states_query:
+            print(f"{i.id}")
