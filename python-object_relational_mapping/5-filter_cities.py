@@ -30,11 +30,12 @@ class QueryExec():
             = cities.state_id WHERE states.name = %(stname)s\
             ORDER BY cities.id ASC", {'stname': argv[4]})
         result = cur.fetchall()
+        rowCount = len(result)
         resString = ""
-        for row in result:
-            resString += row[0]
-            resString += ", "
-        print(resString[:-2])
+        for i in result:
+            resString += i[0]
+            resString += ", " if i < rowCount else ""
+        print(resString)
         cur.close()
         conn.close()
 
