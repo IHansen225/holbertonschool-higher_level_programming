@@ -17,7 +17,8 @@ if __name__ == "__main__":
 
     NewRecord = State(name="Louisiana")
     session.add(NewRecord)
+    session.commit()
     states_query = session.query(State).filter(
         State.name == "Louisiana"
     ).one()
-    print(states_query.id)
+    print(NewRecord.id)
