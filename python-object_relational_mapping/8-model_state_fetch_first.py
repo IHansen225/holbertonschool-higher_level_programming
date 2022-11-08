@@ -16,4 +16,7 @@ if __name__ == "__main__":
     session = Session()
 
     states_query = session.query(State).filter().first()
-    print(states_query)
+    if states_query is None:
+        print("Nothing")
+    else:
+        print(f"{states_query.id}: {states_query.name}")
