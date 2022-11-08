@@ -28,7 +28,7 @@ class QueryExec():
         cur = conn.cursor()
         cur.execute("""SELECT *
             FROM states
-            WHERE BINARY name = '%{name}s'
+            WHERE BINARY name = '%(name)s'
             ORDER BY id ASC""", {'name': argv[4]})
         result = cur.fetchall()
         for row in result:
