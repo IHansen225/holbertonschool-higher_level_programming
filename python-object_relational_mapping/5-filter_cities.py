@@ -26,7 +26,7 @@ class QueryExec():
             db=argv[3]
         )
         cur = conn.cursor()
-        cur.execute("SELECT name FROM cities JOIN states ON states.id\
+        cur.execute("SELECT cities.name FROM cities JOIN states ON states.id\
             WHERE states.name = %(stname)s = cities.state_id\
             ORDER BY cities.id ASC", {'stname': argv[4]})
         result = cur.fetchall()
