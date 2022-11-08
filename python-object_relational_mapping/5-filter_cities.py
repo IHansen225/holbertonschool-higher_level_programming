@@ -34,7 +34,7 @@ class QueryExec():
         resString = ""
         for i in range(rowCount):
             resString += result[i][0]
-            resString += ", " if i < rowCount else ""
+            resString += ", " if i < rowCount - 1 else ""
         print(resString)
         cur.close()
         conn.close()
