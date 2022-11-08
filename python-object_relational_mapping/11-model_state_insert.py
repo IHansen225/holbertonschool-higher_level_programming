@@ -16,6 +16,7 @@ if __name__ == "__main__":
     session = Session()
 
     NewRecord = State(name="Louisiana")
+    session.add(NewRecord)
     states_query = session.query(State).filter(
         State.name == "Louisiana"
     ).one()
