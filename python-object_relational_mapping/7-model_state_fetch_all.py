@@ -3,7 +3,7 @@
     Approach to SQLAlchemy ORM
     First query exercise
 """
-import sys import argv
+from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine as eng
 from sqlalchemy.orm import sessionmaker
