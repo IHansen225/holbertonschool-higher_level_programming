@@ -33,7 +33,8 @@ class QueryExec():
         resString = ""
         for row in result:
             resString += row[0]
-        print(resString)
+            resString += ", "
+        print(resString[:-2])
         cur.close()
         conn.close()
 
