@@ -3,16 +3,14 @@
     Approach to SQLAlchemy ORM
     First query exercise
 """
-import sys
+import sys import argv
 from model_state import Base, State
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine as eng
 from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
-    engine = create_engine(f"""
-    mysql+mysqldb://{sys.argv[1]}:
-    {sys.argv[2]}@localhost/{sys.argv[3]}""")
+    engine = eng(f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}")
 
     Session = sessionmaker(engine)
     session = Session()
