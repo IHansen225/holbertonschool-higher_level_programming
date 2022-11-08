@@ -28,7 +28,7 @@ class QueryExec():
         cur = conn.cursor()
         query = """SELECT *
             FROM states
-            WHERE CAST(name as varbinary(100)) = CAST('{}' as varbinary(100))
+            WHERE states.name = '{}'
             ORDER BY id ASC""".format(argv[4])
         cur.execute(query)
         result = cur.fetchall()
