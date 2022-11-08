@@ -30,8 +30,8 @@ class QueryExec():
         query = """SELECT *
             FROM states
             WHERE BINARY name = '{name}'
-            ORDER BY id ASC""".format(name=argv[4])
-        cur.execute(query)
+            ORDER BY id ASC"""
+        cur.execute(query, {'name': argv[4]})
         result = cur.fetchall()
         for row in result:
             print(row)
