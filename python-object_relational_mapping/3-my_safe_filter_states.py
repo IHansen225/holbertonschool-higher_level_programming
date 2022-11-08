@@ -6,18 +6,3 @@
 """
 import sys
 import MySQLdb as sql
-
-def queryExec():
-    """
-        Creates a connection to the database and executes a query
-    """
-    conn = sql.connect(host='localhost', port=3306, user=sys.argv[1], password=sys.argv[2], db=sys.argv[3], charset='utf8')
-    cursor = conn.cursor()
-    cursor.execute(f"SELECT * FROM states WHERE name = '{sys.argv[4]}' ORDER BY id ASC")
-    res = cursor.fetchall()
-    for row in res:
-        print(row)
-    cursor.close()
-    conn.close()
-
-queryExec()
