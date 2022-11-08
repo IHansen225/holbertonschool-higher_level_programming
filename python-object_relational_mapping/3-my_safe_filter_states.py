@@ -31,7 +31,7 @@ class QueryExec():
             FROM states
             WHERE BINARY name = %s
             ORDER BY id ASC"""
-        cur.execute(query, argv[4])
+        cur.execute(query % argv[4])
         result = cur.fetchall()
         for row in result:
             print(row)
