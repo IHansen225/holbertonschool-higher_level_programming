@@ -15,10 +15,10 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    states_query = session.query(State).filter(
-        states_query.name like "%a%"
-    )
+    states_query = session.query(State).all()
     if states_query is None:
         print("Nothing")
     else:
-        print(f"{states_query.id}: {states_query.name}")
+        for i in states_query:
+            if "a" in states_query.name:
+                print(f"{states_query.id}: {states_query.name}")
