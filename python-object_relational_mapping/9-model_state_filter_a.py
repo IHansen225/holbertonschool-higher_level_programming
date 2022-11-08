@@ -16,9 +16,6 @@ if __name__ == "__main__":
     session = Session()
 
     states_query = session.query(State).all()
-    if states_query is None:
-        print("Nothing")
-    else:
-        for i in states_query:
-            if "a" in states_query.name:
-                print(f"{states_query.id}: {states_query.name}")
+    for i in states_query:
+        if "a" in i.name:
+            print(f"{i.id}: {i.name}")
