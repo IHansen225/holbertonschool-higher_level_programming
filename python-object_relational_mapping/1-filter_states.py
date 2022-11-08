@@ -27,7 +27,7 @@ class QueryExec():
             db=argv[3]
         )
         cur = conn.cursor()
-        cur.execute(f"SELECT * FROM states WHERE name LIKE "N%" ORDER BY id ASC")
+        cur.execute(f"SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
         result = cur.fetchall()
         for row in result:
             print(row)
