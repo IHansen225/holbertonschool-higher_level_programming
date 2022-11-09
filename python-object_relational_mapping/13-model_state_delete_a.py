@@ -17,6 +17,6 @@ if __name__ == "__main__":
 
     states_query = session.query(State).filter(
         State.name.contains("a")
-    )
+    ).all()
     session.delete(states_query)
     session.commit()
