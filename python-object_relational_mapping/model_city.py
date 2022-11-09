@@ -10,10 +10,9 @@ Base = declarative_base()
 
 class City(Base):
     """
-        Base constructor for query methods
+        This class represents a city in the database
     """
-    __tablename__ = 'cities'
-
-    id = sa.Column(sa.Integer, primary_key=True, nullable=False)
-    name = sa.Column(sa.String(128), nullable=True)
+    __tablename__ = "cities"
+    id = sa.Column(sa.Integer, primary_key=True)
+    name = sa.Column(sa.String(128), nullable=False)
     state_id = sa.Column(sa.Integer, ForeignKey("states.id"), nullable=False)
