@@ -1,2 +1,2 @@
 #!/usr/bin/node
-console.log(`${process.argv[1] !== undefined ? process.argv[1] : 'No arguments'}`);
+console.log(`${process.argv[2] !== undefined ? process.argv[2] : 'No arguments'}`);
