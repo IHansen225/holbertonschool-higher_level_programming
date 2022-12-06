@@ -2,8 +2,8 @@
 const args = process.argv.length;
 console.log(`${args === 0
     ? 'No a'
-    : 'A'}rgument${args === 1
+    : 'A'}rgument${args === 2
         ? ' found'
-        : (args > 1
+        : (args > 2
             ? 's found'
             : '')}`);
