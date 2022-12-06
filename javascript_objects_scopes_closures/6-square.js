@@ -4,7 +4,7 @@ module.exports = class Square extends require('./5-square') {
     super(size, size);
   }
 
-  charprint (c) {
+  charPrint (c) {
     if (c === undefined) {
       this.print();
       return;
