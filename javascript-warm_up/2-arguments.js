@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const args = process.argv.length;
-console.log(`${args === 1
+console.log(`${args === 0
     ? 'No a'
-    : 'A'}rgument${args === 2
+    : 'A'}rgument${args === 1
         ? ' found'
-        : (args > 2
+        : (args > 1
             ? 's found'
             : '')}`);
