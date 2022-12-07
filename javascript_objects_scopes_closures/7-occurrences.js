@@ -4,4 +4,5 @@ module.exports.nbOccurences = function (list, searchElement) {
   for (const elem of list) {
     count = elem === searchElement ? count + 1 : count;
   }
+  return count;
 };
