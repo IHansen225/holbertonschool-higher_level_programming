@@ -1,4 +1,2 @@
 #!/usr/bin/node
-module.exports.converter = function (base) {
-
-};
+module.exports.converter = function (base) { return function (n) { return n.toString(base); }; };
