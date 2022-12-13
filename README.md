@@ -29,3 +29,4 @@ High-level programming project based on Python, SQL and JavaScript languages.
 | [./python-more\_data\_structures](https://github.com/IHansen225/holbertonschool-higher_level_programming/tree/main/python-more_data_structures)                | Advanced data structures exercises.             |
 | [./python-object\_relational\_mapping](https://github.com/IHansen225/holbertonschool-higher_level_programming/tree/main/python-object_relational_mapping)      | Python SQL ORM exercises.                       |
 | [./python-test\_driven\_development](https://github.com/IHansen225/holbertonschool-higher_level_programming/tree/main/python-test_driven_development)          | Python testing module exercises.                |
+| [./javascript-web\_scraping](https://github.com/IHansen225/holbertonschool-higher_level_programming/tree/main/javascript-web_scraping)                         | Web scraping with JS request module exercises|
