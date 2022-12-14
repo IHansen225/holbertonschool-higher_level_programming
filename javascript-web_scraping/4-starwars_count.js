@@ -8,8 +8,10 @@ request.get(`${process.argv[2]}`, function (err, res, body) {
   let mcount = 0;
 
   for (const movie of JSON.parse(body).results) {
-    if (movie.characters.endsWith('/18/')) {
-      mcount++;
+    for (const character of movie.characters) {
+      if (character.endsWith('/18/')) {
+        mcount++;
+      }
     }
   }
 
