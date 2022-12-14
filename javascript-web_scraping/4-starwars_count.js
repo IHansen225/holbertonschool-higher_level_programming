@@ -7,7 +7,7 @@ request.get(`${process.argv[2]}`, function (err, res, body) {
   }
   let mcount = 0;
 
-  for (let movie of JSON.parse(body).results) {
+  for (const movie of JSON.parse(body).results) {
     if (movie.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
       mcount++;
     }
