@@ -4,6 +4,7 @@ const request = require('request');
 request.get(`${process.argv[2]}`, function (err, res, body) {
   if (err) {
     console.error(err);
+    return;
   }
   const dic = {};
   for (const task of JSON.parse(body)) {
