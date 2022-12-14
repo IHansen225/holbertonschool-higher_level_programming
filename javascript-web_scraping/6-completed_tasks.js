@@ -2,6 +2,9 @@
 const request = require('request');
 
 request.get(`${process.argv[2]}`, function (err, res, body) {
+  if (err) {
+    console.error(err);
+  }
   res_dict = {};
   for (task of JSON.parse(body)) {
     if (!(task.userId in res_dict) && task.completed) {
