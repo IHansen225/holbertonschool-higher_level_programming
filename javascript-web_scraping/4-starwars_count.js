@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-request.get(`https://swapi-api.hbtn.io/api/films/`, function(err, res, body) {
+request.get(`${process.argv[2]}`, function(err, res, body) {
   if (err) {
     console.error(err);
   }
